@@ -1,24 +1,22 @@
-# ecommerce-client
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#FRONT END
+#1
+npm install -g @vue/cli
+vue --version
+vue create ecommerce-client
+cd ecommerce-client
+Default ([Vue 3] babel, eslint)
+use npm
 
-### Lints and fixes files
-```
-npm run lint
-```
+$ cd ecommerce-client
+$ npm run serve
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.100.67:8080/
+
+
+
+#git init
