@@ -1,54 +1,82 @@
-# Front End Setup Guide
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
 
-## 1. Install Vue CLI
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
 
-Make sure you have Vue CLI installed globally:
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
 
-```bash
-npm install -g @vue/cli
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-Verify the installation:
-vue --version
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
 
-2. Create Vue Project
-Create a new Vue project named "ecommerce-client":
-vue create ecommerce-client
-cd ecommerce-client
-Choose the default preset ([Vue 3] babel, eslint) and use npm.
+        .command {
+            display: block;
+            margin: 10px 0;
+        }
 
-3. Run the Development Server
-Navigate to the project folder and run the development server:
-cd ecommerce-client
-npm run serve
-The application will be accessible at:
+        .note {
+            background-color: #ffd700;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Vue.js Front End Setup Guide</title>
+</head>
+<body>
+    <h1>Vue.js Front End Setup Guide</h1>
 
-Local: http://localhost:8080/
-Network: http://192.168.100.67:8080/
-4. Add Vue Router
-If needed, add Vue Router to your project. If facing issues, run the following commands:
-# If script execution is blocked, run this command first
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    <h2>1. Install Vue CLI</h2>
 
-# Then add Vue Router
-vue add router
-Note: Address any uncommitted changes in the repository before proceeding.
+    <p>Ensure Vue CLI is globally installed:</p>
 
-5. Initialize Git Repository
-Initialize a Git repository for version control:
-git init
+    <pre><code class="command">npm install -g @vue/cli</code></pre>
 
-Troubleshooting
-"Parsing error: No babel config file detected"
-If you encounter this error when the IDE is not open at the Vue project's root directory, follow these steps:
+    <p>Verify the installation:</p>
 
-Access the settings.json file:
+    <pre><code class="command">vue --version</code></pre>
 
-Press Ctrl+, or navigate to File > Preferences > Settings.
-Type "eslint" in the search bar and find "Edit in settings.json" under Options.
-Locate the workingDirectories setting in settings.json:
-"eslint.workingDirectories": [
-    {"mode": "auto"}
-]
-Make sure to adjust these settings based on your project structure.
+    <h2>2. Create Vue Project</h2>
 
-Feel free to customize the content further based on your project's specific requirements or add any additional sections you think would be helpful.
+    <p>Create a new Vue project named "ecommerce-client":</p>
+
+    <pre><code class="command">vue create ecommerce-client
+cd ecommerce-client</code></pre>
+
+    <p>Choose the default preset ([Vue 3] babel, eslint) and use npm.</p>
+
+    <!-- Repeat similar structures for the next steps -->
+
+    <div class="note">
+        <p><strong>Note:</strong> Feel free to customize the content further based on your project's specific requirements or add any additional sections you think would be helpful.</p>
+    </div>
+</body>
+</html>
