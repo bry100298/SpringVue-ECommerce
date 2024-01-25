@@ -1,82 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
+<!-- Front End Setup Guide -->
 
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
+<h2>1. Install Vue CLI</h2>
 
-        h2 {
-            color: #555;
-            margin-top: 20px;
-        }
+<p>Make sure you have Vue CLI installed globally:</p>
 
-        code {
-            background-color: #f0f0f0;
-            padding: 2px 4px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+<pre>
+  <code>
+    npm install -g @vue/cli
+    vue --version
+  </code>
+</pre>
 
-        pre {
-            background-color: #f0f0f0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
+<h2>2. Create Vue Project and Run the Development Server</h2>
 
-        .command {
-            display: block;
-            margin: 10px 0;
-        }
+<p>Create a new Vue project named "ecommerce-client":</p>
 
-        .note {
-            background-color: #ffd700;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-    </style>
-    <title>Vue.js Front End Setup Guide</title>
-</head>
-<body>
-    <h1>Vue.js Front End Setup Guide</h1>
+<pre>
+  <code>
+    vue create ecommerce-client
+    cd ecommerce-client
+  </code>
+</pre>
 
-    <h2>1. Install Vue CLI</h2>
+<p>Choose the default preset ([Vue 3] babel, eslint) and use npm.</p>
 
-    <p>Ensure Vue CLI is globally installed:</p>
+<p>Run the development server:</p>
 
-    <pre><code class="command">npm install -g @vue/cli</code></pre>
+<pre>
+  <code>
+    npm run serve
+  </code>
+</pre>
 
-    <p>Verify the installation:</p>
+<p>The application will be accessible at:</p>
+<ul>
+  <li>Local: <a href="http://localhost:8080/">http://localhost:8080/</a></li>
+  <li>Network: <a href="http://192.168.100.67:8080/">http://192.168.100.67:8080/</a></li>
+</ul>
 
-    <pre><code class="command">vue --version</code></pre>
+<h2>3. Add Vue Router</h2>
 
-    <h2>2. Create Vue Project</h2>
+<p>If needed, add Vue Router to your project. If facing issues, run the following commands:</p>
 
-    <p>Create a new Vue project named "ecommerce-client":</p>
+<pre>
+  <code>
+    <!-- If script execution is blocked, run this command first -->
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
-    <pre><code class="command">vue create ecommerce-client
-cd ecommerce-client</code></pre>
+    <!-- Then add Vue Router -->
+    vue add router
+  </code>
+</pre>
 
-    <p>Choose the default preset ([Vue 3] babel, eslint) and use npm.</p>
+<p>Note: Address any uncommitted changes in the repository before proceeding.</p>
 
-    <!-- Repeat similar structures for the next steps -->
+<h2>4. Initialize Git Repository</h2>
 
-    <div class="note">
-        <p><strong>Note:</strong> Feel free to customize the content further based on your project's specific requirements or add any additional sections you think would be helpful.</p>
-    </div>
-</body>
-</html>
+<p>Initialize a Git repository for version control:</p>
+
+<pre>
+  <code>
+    git init
+  </code>
+</pre>
+
+<h2>Troubleshooting</h2>
+
+<p><strong>"Parsing error: No babel config file detected"</strong></p>
+
+<p>If you encounter this error when the IDE is not open at the Vue project's root directory, follow these steps:</p>
+
+<ol>
+  <li>Access the <code>settings.json</code> file:</li>
+  <ul>
+    <li>Press <code>Ctrl+,</code> or navigate to <code>File > Preferences > Settings</code>.</li>
+    <li>Type "eslint" in the search bar and find "Edit in settings.json" under Options.</li>
+  </ul>
+  <li>Locate the <code>workingDirectories</code> setting in <code>settings.json</code>:</li>
+</ol>
+
+<pre>
+  <code>
+    "eslint.workingDirectories": [
+      {"mode": "auto"}
+    ]
+  </code>
+</pre>
+
+<p>Make sure to adjust these settings based on your project structure.</p>
