@@ -1,4 +1,5 @@
 <!-- Front End Setup Guide -->
+<h1>Front End Setup Guide</h1>
 
 <h2>1. Install Vue CLI</h2>
 
