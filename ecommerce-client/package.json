@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/style.css",
+    "build": "npm run build:css && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.17",
     "core-js": "^3.8.3",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
@@ -35,6 +39,12 @@
       "parser": "@babel/eslint-parser"
     },
     "rules": {}
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   },
   "browserslist": [
     "> 1%",

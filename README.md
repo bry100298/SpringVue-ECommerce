@@ -87,4 +87,58 @@
   </code>
 </pre>
 
+<h2>4. Install and Configure Tailwind CSS</h2>
+
+<p>Install Tailwind CSS and its dependencies:</p>
+
+<pre>
+  <code>
+    npm install -D tailwindcss postcss autoprefixer
+  </code>
+</pre>
+
+<p>Create a Tailwind CSS configuration file:</p>
+
+<pre>
+  <code>
+    npx tailwindcss init -p
+  </code>
+</pre>
+
+<p>Create a new CSS file for your styles, for example, in the "src/assets/css/" directory:</p>
+
+<pre>
+  <code>
+    mkdir -p src/assets/css
+    touch src/assets/css/tailwind.css
+  </code>
+</pre>
+
+<p>Update the <code>tailwind.css</code> file with the following content:</p>
+
+```css
+/* src/assets/css/tailwind.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+```
+<p>Update the <code>postcss.config.js</code> file:</p>
+<pre>
+  <code>
+    module.exports = {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    }
+  </code>
+</pre>
+<p>Update the <code>main.js</code> file to include the Tailwind CSS styles:</p>
+<pre>
+  <code>
+    // src/main.js
+    import '@assets/css/tailwind.css'
+  </code>
+</pre>
+
 <p>Make sure to adjust these settings based on your project structure.</p>
