@@ -65,30 +65,7 @@
   </code>
 </pre>
 
-<h2>Troubleshooting</h2>
-
-<p><strong>"Parsing error: No babel config file detected"</strong></p>
-
-<p>If you encounter this error when the IDE is not open at the Vue project's root directory, follow these steps:</p>
-
-<ol>
-  <li>Access the <code>settings.json</code> file:</li>
-  <ul>
-    <li>Press <code>Ctrl+,</code> or navigate to <code>File > Preferences > Settings</code>.</li>
-    <li>Type "eslint" in the search bar and find "Edit in settings.json" under Options.</li>
-  </ul>
-  <li>Locate the <code>workingDirectories</code> setting in <code>settings.json</code>:</li>
-</ol>
-
-<pre>
-  <code>
-    "eslint.workingDirectories": [
-      {"mode": "auto"}
-    ]
-  </code>
-</pre>
-
-<h2>4. Install and Configure Tailwind CSS</h2>
+<h2>5. Install and Configure Tailwind CSS</h2>
 
 <p>Install Tailwind CSS and its dependencies:</p>
 
@@ -103,6 +80,25 @@
 <pre>
   <code>
     npx tailwindcss init -p
+  </code>
+</pre>
+
+<p>Add the following scripts to your <code>package.json</code>:</p>
+
+<pre>
+  <code>
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/style.css",
+      "build": "npm run build:css && vue-cli-service build",
+      "lint": "vue-cli-service lint"
+    },
+    "postcss": {
+      "plugins": {
+        "tailwindcss": {},
+        "autoprefixer": {}
+      }
+    }
   </code>
 </pre>
 
@@ -142,4 +138,38 @@
   </code>
 </pre>
 
+<p>Build Tailwind CSS:</p>
+
+<pre>
+  <code>
+    npm run build:css
+    npx tailwindcss build -o dist/style.css
+  </code>
+</pre>
+
+<p>Now, your styles are applied, and Tailwind CSS is set up!</p>
+
 <p>Make sure to adjust these settings based on your project structure.</p>
+
+<h2>#tbd Troubleshooting</h2>
+
+<p><strong>"Parsing error: No babel config file detected"</strong></p>
+
+<p>If you encounter this error when the IDE is not open at the Vue project's root directory, follow these steps:</p>
+
+<ol>
+  <li>Access the <code>settings.json</code> file:</li>
+  <ul>
+    <li>Press <code>Ctrl+,</code> or navigate to <code>File > Preferences > Settings</code>.</li>
+    <li>Type "eslint" in the search bar and find "Edit in settings.json" under Options.</li>
+  </ul>
+  <li>Locate the <code>workingDirectories</code> setting in <code>settings.json</code>:</li>
+</ol>
+
+<pre>
+  <code>
+    "eslint.workingDirectories": [
+      {"mode": "auto"}
+    ]
+  </code>
+</pre>
