@@ -102,6 +102,28 @@
   </code>
 </pre>
 
+<p>Rerun npx tailwindcss init -p or manual Add the following scripts to your <code>tailwind.config.js</code>:</p>
+
+<pre>
+  <code>
+    // tailwind.config.js
+
+    module.exports = {
+      // ... other configurations
+
+      purge: {
+        enabled: true,
+        content: [
+          './src/**/*.html',
+          './src/**/*.vue',
+          './src/**/*.jsx',
+          // Add other file paths as needed
+        ],
+      },
+    };
+  </code>
+</pre>
+
 <p>Create a new CSS file for your styles, for example, in the "src/assets/css/" directory:</p>
 
 <pre>
@@ -115,10 +137,11 @@
 
 ```css
 /* src/assets/css/tailwind.css */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 ```
+
 <p>Update the <code>postcss.config.js</code> file:</p>
 <pre>
   <code>
@@ -173,3 +196,37 @@
     ]
   </code>
 </pre>
+
+<p><strong>Caching and Lint</strong></p>
+
+<pre>
+  <code>
+    npm cache clean --force
+
+    npm run lint -- --fix
+  </code>
+</pre>
+
+<p><strong>use volar service instead of vetur</strong></p>
+
+<pre>
+  <code>
+    npm install volar-service-vetur
+  </code>
+</pre>
+
+<p><strong>Option Icons , still not working</strong></p>
+
+<pre>
+  <code>
+    npm install tailwindcss-plugin-icons
+
+    npm install vue-feather-icons
+  </code>
+</pre>
+
+
+<!-- Back End Setup Guide -->
+<h1>Back End Setup Guide</h1>
+
+<h2>1. Install ...</h2>
