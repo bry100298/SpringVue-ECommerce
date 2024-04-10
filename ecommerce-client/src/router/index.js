@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AddCategory from "../views/Category/AddCategory.vue";
+import MyAdmin from "../views/MyAdmin.vue";
 
 const routes = [
   {
@@ -20,7 +21,12 @@ const routes = [
   {
     path: "/admin/category/add",
     name: "AddCategory",
-    component: AddCategory
+    component: AddCategory,
+  },
+  {
+    path: "/admin",
+    name: "MyAdmin",
+    component: MyAdmin,
   },
 ];
 

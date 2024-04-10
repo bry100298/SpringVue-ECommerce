@@ -230,3 +230,12 @@
 <h1>Back End Setup Guide</h1>
 
 <h2>1. Install ...</h2>
+
+https://www.educative.io/
+
+1. First, go to https://start.spring.io/ where we can create new spring app and add dependencies
+2. Select mavenm, add Spring Data JPA and Spring Web dependencies
+   click "Add dependencies" , type "Spring Data JPA" and "Spring Web"
+   https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension/blob/master/README.md
+3. 
+
