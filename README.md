@@ -239,3 +239,22 @@ https://www.educative.io/
    https://github.com/fabric8-analytics/fabric8-analytics-vscode-extension/blob/master/README.md
 3. 
 
+
+
+
+
+
+{
+  "categoryName": "Product Category",
+  "description": "Product Category",
+  "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEBqYEUHs9SPync2bo8AmdYjzW5WYicOWF8lreCXnMcQ&s"
+}
+
+
+
+{
+  "categoryName": "string",
+  "description": "string",
+  "id": 0,
+  "imageUrl": "string"
+}
